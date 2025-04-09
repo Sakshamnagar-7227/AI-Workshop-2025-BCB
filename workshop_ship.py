@@ -53,10 +53,10 @@ def predict_survival(Pclass, Sex, Age, Fare):
 demo = gr.Interface(
     fn=predict_survival,
     inputs=[
-        gr.inputs.Number(label="Pclass (1/2/3)"),
-        gr.inputs.Number(label="Sex (0 = Male, 1 = Female)"),
-        gr.inputs.Number(label="Age"),
-        gr.inputs.Number(label="Fare")
+        gr.Number(label="Pclass (1/2/3)"),
+        gr.Number(label="Sex (0 = Male, 1 = Female)"),
+        gr.Number(label="Age"),
+        gr.Number(label="Fare")
     ],
     outputs="text",
     title="Titanic Survival Predictor"
